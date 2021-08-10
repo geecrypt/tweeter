@@ -1,3 +1,33 @@
 nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 120px;
+  width: 100vw;
+  padding: 1.5em;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+nav span {
   font-family: 'Bungee', sans-serif;
+}
+
+nav div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#new-nav-tweet {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5px;
+  align-items: center;
+}
+
+#new-nav-tweet i {
+  margin: 10px;
 }
