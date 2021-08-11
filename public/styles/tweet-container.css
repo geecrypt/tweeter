@@ -1,19 +1,18 @@
 .tweet-container {
-  border: solid 5px;
+  border: solid 3.5px;
   padding: 10px;
+  margin-bottom: 40px;
 }
 
 .tweet-container:hover {
   box-shadow: 0 0 11px #8A9BD0;
 }
 
-.tweet {}
-
 article.tweet footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: solid 5px;
+  border-top: solid 3.5px;
 }
 
 article.tweet footer div {
@@ -33,12 +32,14 @@ article.tweet header {
   justify-content: space-between;
   align-items: center;
   margin: 20px;
+  font-weight: 300;
+  font-size: 30px;
 }
 
 article.tweet header h4 {
   margin: 15px 0px 15px 15px;
   margin-bottom: 15px;
-  color: grey
+  color: #CDCDCD
 }
 
 article.tweet header i {
