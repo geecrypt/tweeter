@@ -23,6 +23,7 @@ main h2 {
 .new-tweet {
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .new-tweet button {

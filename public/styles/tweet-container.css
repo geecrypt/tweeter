@@ -1,5 +1,56 @@
-.tweet-container {}
+.tweet-container {
+  border: solid 5px;
+  padding: 10px;
+}
+
+.tweet-container:hover {
+  box-shadow: 0 0 11px #8A9BD0;
+}
 
 .tweet {}
 
-footer.tweet {}
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 5px;
+}
+
+article.tweet footer div {
+  margin-right: 20px;
+}
+
+article.tweet footer h6 {
+  margin: 20px 0px 20px 20px;
+}
+
+article.tweet footer i:hover {
+  color: red
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+article.tweet header h4 {
+  margin: 15px 0px 15px 15px;
+  margin-bottom: 15px;
+  color: grey
+}
+
+article.tweet header i {
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+article.tweet header div {
+  display: flex;
+  align-items: center;
+}
+
+article.tweet p {
+  margin: 20px;
+}
