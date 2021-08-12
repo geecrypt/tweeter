@@ -12,6 +12,10 @@ html {
   box-sizing: inherit;
 }
 
+/* * {
+  border: 1px solid red;
+} */
+
 /*
  * Global layout stuff
  */
@@ -28,7 +32,8 @@ body {
 }
 
 main {
-  /* width: 90%; */
+  margin-top: 240px;
+  flex: 1
 }
 
 p {
@@ -44,11 +49,17 @@ p {
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
+  padding: 0px 50px 0px 50px;
 }
 
 @media only screen and (max-width: 1024px) {
   .main-container {
     flex-direction: column;
     align-items: center;
+    padding: 0;
+  }
+  main {
+    margin-top: 60px;
+    width: 90%
   }
 }
