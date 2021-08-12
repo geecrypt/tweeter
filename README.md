@@ -21,6 +21,11 @@ This repository is the starter code for the project: Students will fork and clon
 - [x] box-sizing: border-box
 - [x] what is the > specifier in css? e.g. #main > nav {}
 - [ ] TODO: fix duplicate tweets after each re-render
+- [ ] use relative units for margin/padding and font sizes
+- [ ] make "Write a new tweet" arrow red, bounce, and scroll to compose tweet section
+- [ ] style "Tweet" button and animate on hover and click
+- [ ] change Nav text colour on mobile for better contrast
+- [ ] 
 
 
 

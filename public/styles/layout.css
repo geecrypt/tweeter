@@ -59,7 +59,8 @@ p {
     padding: 0;
   }
   main {
-    margin-top: 60px;
-    width: 90%
+    margin-top: 400px;
+    width: 90%;
+    z-index: -1;
   }
 }
