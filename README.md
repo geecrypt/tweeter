@@ -18,9 +18,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 # Todo
 
-- [ ] box-sizing: border-box
+- [x] box-sizing: border-box
 - [x] what is the > specifier in css? e.g. #main > nav {}
-- [ ] 
+- [ ] TODO: fix duplicate tweets after each re-render
 
 
 
