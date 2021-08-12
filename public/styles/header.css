@@ -1,11 +1,11 @@
 header.user {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 400px;
   width: 40%;
   background-color: #8A9BD0;
-  /* padding: 120px 0 0 0; */
   background-image: url("../images/45-degree-fabric-light.png");
 }
 
