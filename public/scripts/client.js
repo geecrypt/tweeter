@@ -59,6 +59,11 @@ const renderTweets = tweetsData => {
    }
 }
 
+$("#new-tweet").find("").submit(function( event ) {
+  alert( "Handler for .submit() called." );
+  event.preventDefault();
+});
+
 $(() => {
   renderTweets(tweetsTestData);
 });
