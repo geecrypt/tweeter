@@ -15,3 +15,16 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+# Todo
+
+- [ ] box-sizing: border-box
+- [x] what is the > specifier in css? e.g. #main > nav {}
+- [ ] 
+
+
+
+
+
+
+
