@@ -54,9 +54,9 @@ $(() => {
     let tweetTextVal = $('#tweet-text').val();
 
     if (tweetTextVal.length === 0) {
-      $('.errors').children().text('you did not enter any text');
+      $('.error').children().text('you did not enter any text');
     } else if (tweetTextVal.length > 140) {
-      $('.errors').children().text('you exceeded the character limit');
+      $('.error').children().text('you exceeded the character limit');
     } else {
       const serializedData = $(this).serialize();
       $('.errors').children().text('');
