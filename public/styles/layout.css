@@ -43,7 +43,7 @@ p {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  width: 90vw;
+  width: 100%;
 }
 
 @media only screen and (max-width: 1024px) {
