@@ -65,5 +65,22 @@ $("#new-tweet").find("").submit(function( event ) {
 });
 
 $(() => {
+
+  $('#tweet-text').parent().submit(function( event ) {
+    event.preventDefault();
+
+    const serializedData = $(this).serialize();
+    console.log(serializedData);
+
+    $.post('/tweets/', serializedData);
+
+
+    // .then(fetchPosts)
+    // $.post('/api/posts', serializedData).then(() => {})
+    // $.post('/api/posts', serializedData, (response) => {
+    //   console.log(response);
+    //   fetchPosts();
+    // });
+  });
   renderTweets(tweetsTestData);
 });
