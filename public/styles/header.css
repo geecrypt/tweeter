@@ -5,13 +5,23 @@ header.user {
   align-items: center;
   height: 400px;
   width: 100%;
+  padding-top: 70px;
   background-color: #8A9BD0;
   background-image: url("../images/45-degree-fabric-light.png");
 }
 
+header.user img {
+  max-width: 200px;
+}
+
+header h2 {
+  margin: 5px 0px 5px 0px;
+}
+
 @media only screen and (min-width: 1024px) {
   header.user {
-    width: 40%;
+    width: 30%;
     margin: 240px 140px 0px 60px;
+    padding-top: 30px;
   }
 }
