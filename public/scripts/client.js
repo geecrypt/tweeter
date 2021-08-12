@@ -52,11 +52,15 @@ $(() => {
     const tweetTextVal = $('#tweet-text').val();
 
     if (tweetTextVal.length === 0) {
+      $('.error').slideDown("slow");
       $('.error').children().text('you did not enter any text');
+      // add attribute:
     } else if (tweetTextVal.length > 140) {
+      $('.error').slideDown("slow");
       $('.error').children().text('you exceeded the character limit');
     } else {
       const serializedData = $(this).serialize();
+      $('.error').slideUp("slow");
       $('.errors').children().text('');
       $('#tweet-text').val('');
       $('#tweet-text').parent().find('.counter').val('140');
