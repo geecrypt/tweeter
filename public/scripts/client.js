@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Test / driver code (temporary). Eventually will get this from the server.
-const tweetsTestData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
-
 const createTweetElement = tweetData => {
   const $header = $('<header>');
   $header.append(`<div><img src=${tweetData.user.avatars}><h8>${tweetData.user.name}</h8></div>`);
@@ -65,6 +39,12 @@ $("#new-tweet").find("").submit(function( event ) {
 });
 
 $(() => {
+  const loadTweets = function() {
+    $.get( "/tweets/", function( data ) {
+      renderTweets(data);
+      console.log("Load was performed." );
+    });
+  }();
 
   $('#tweet-text').parent().submit(function( event ) {
     event.preventDefault();
@@ -73,14 +53,5 @@ $(() => {
     console.log(serializedData);
 
     $.post('/tweets/', serializedData);
-
-
-    // .then(fetchPosts)
-    // $.post('/api/posts', serializedData).then(() => {})
-    // $.post('/api/posts', serializedData, (response) => {
-    //   console.log(response);
-    //   fetchPosts();
-    // });
   });
-  renderTweets(tweetsTestData);
 });
