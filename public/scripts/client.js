@@ -22,36 +22,34 @@ const createTweetElement = tweetData => {
   const $tweet = $('<article>').addClass('tweet');
   $tweet.append($header, $p, $footer);
 
-  console.log($tweet);
-
   return $tweet;
 };
 
 const renderTweets = tweetsData => {
-   for (const tweetData of tweetsData) {
+  $('#tweets-container').empty();
+  for (const tweetData of tweetsData) {
     $('#tweets-container').prepend(createTweetElement(tweetData));
-   }
-}
+  }
+};
 
-$("#new-tweet").find("").submit(function( event ) {
-  alert( "Handler for .submit() called." );
+$("#new-tweet").find("").submit(function(event) {
+  alert("Handler for .submit() called.");
   event.preventDefault();
 });
 
 $(() => {
   const loadTweets = function() {
-    $.get( "/tweets/", function( data ) {
+    $.get("/tweets/", function(data) {
       renderTweets(data);
-      console.log("Load was performed." );
     });
-  }
+  };
   
   loadTweets();
 
-  $('#tweet-text').parent().submit(function( event ) {
+  $('#tweet-text').parent().submit(function(event) {
     event.preventDefault();
 
-    let tweetTextVal = $('#tweet-text').val();
+    const tweetTextVal = $('#tweet-text').val();
 
     if (tweetTextVal.length === 0) {
       $('.error').children().text('you did not enter any text');
