@@ -23,7 +23,7 @@ const createTweetElement = tweetData => {
   $tweet.append($header, $p, $footer);
 
   console.log($tweet);
-  
+
   return $tweet;
 };
 
@@ -49,9 +49,16 @@ $(() => {
   $('#tweet-text').parent().submit(function( event ) {
     event.preventDefault();
 
-    const serializedData = $(this).serialize();
-    console.log(serializedData);
+    const tweetTextVal = $('#tweet-text').val();
 
-    $.post('/tweets/', serializedData);
+    if (tweetTextVal.length === 0) {
+      alert('No characters entered!');
+    } else if (tweetTextVal.length > 140) {
+      alert('Too many characters entered!');
+    } else {
+      const serializedData = $(this).serialize();
+      console.log(serializedData);
+      $.post('/tweets/', serializedData);
+    }
   });
 });
