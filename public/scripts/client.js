@@ -29,7 +29,7 @@ const createTweetElement = tweetData => {
 
 const renderTweets = tweetsData => {
    for (const tweetData of tweetsData) {
-    $('#tweets-container').append(createTweetElement(tweetData));
+    $('#tweets-container').prepend(createTweetElement(tweetData));
    }
 }
 
@@ -44,7 +44,9 @@ $(() => {
       renderTweets(data);
       console.log("Load was performed." );
     });
-  }();
+  }
+  
+  loadTweets();
 
   $('#tweet-text').parent().submit(function( event ) {
     event.preventDefault();
@@ -52,13 +54,15 @@ $(() => {
     let tweetTextVal = $('#tweet-text').val();
 
     if (tweetTextVal.length === 0) {
-      alert('No characters entered!');
+      $('.errors').children().text('you did not enter any text');
     } else if (tweetTextVal.length > 140) {
-      alert('Too many characters entered!');
+      $('.errors').children().text('you exceeded the character limit');
     } else {
       const serializedData = $(this).serialize();
+      $('.errors').children().text('');
       $('#tweet-text').val('');
-      $.post('/tweets/', serializedData);
+      $('#tweet-text').parent().find('.counter').val('140');
+      $.post('/tweets/', serializedData).then(loadTweets);
     }
   });
 });
