@@ -49,7 +49,7 @@ $(() => {
   $('#tweet-text').parent().submit(function( event ) {
     event.preventDefault();
 
-    const tweetTextVal = $('#tweet-text').val();
+    let tweetTextVal = $('#tweet-text').val();
 
     if (tweetTextVal.length === 0) {
       alert('No characters entered!');
@@ -57,7 +57,7 @@ $(() => {
       alert('Too many characters entered!');
     } else {
       const serializedData = $(this).serialize();
-      console.log(serializedData);
+      $('#tweet-text').val('');
       $.post('/tweets/', serializedData);
     }
   });
