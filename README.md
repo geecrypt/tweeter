@@ -4,10 +4,10 @@ Tweeter is a simple, single-page Twitter clone built with jQuery.
 
 ## Final Product
 
-<img src="https://github.com/geecrypt/tweeter/blob/main/docs/main-desktop.png" alt="desktop" width="800">
-<img src="https://github.com/geecrypt/tweeter/blob/main/docs/main-mobile.png" alt="mobile" width="800">
-<img src="https://github.com/geecrypt/tweeter/blob/main/docs/mobile-heart.png" alt="heart" width="800">
-<img src="https://github.com/geecrypt/tweeter/blob/main/docs/mobile-toomany.png" alt="toomany" width="800">
+<img src="https://github.com/geecrypt/tweeter/blob/master/docs/main-desktop.png" alt="desktop" width="800">
+<img src="https://github.com/geecrypt/tweeter/blob/master/docs/main-mobile.png" alt="mobile" width="800">
+<img src="https://github.com/geecrypt/tweeter/blob/master/docs/mobile-heart.png" alt="heart" width="800">
+<img src="https://github.com/geecrypt/tweeter/blob/master/docs/mobile-toomany.png" alt="toomany" width="800">
 
 ## Getting Started
 
