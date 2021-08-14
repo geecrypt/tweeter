@@ -10,7 +10,7 @@ const createTweetElement = tweetData => {
   $header.append(`<h4>${tweetData.user.handle}</h4>`);
   const $p = $('<p>').text(tweetData.content.text);
   // eslint-disable-next-line
-  const $timeCreated = $('<h6>').text(timeago.format(tweetData.created_at));
+  const $timeCreated = $(`<h6>${timeago.format(tweetData.createdAt)}</h6>`);
   const $actionIcons = [
     $('<i>').addClass('fas fa-flag'),
     $('<i>').addClass('fas fa-retweet'),
